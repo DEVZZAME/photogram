@@ -16,7 +16,7 @@
 					<img src="#" onerror="this.src='/images/person.jpeg'" />
 				</div>
 				<div class="item__username">
-					<h2>TherePrograming</h2>
+					<h2>DEV_ZZAME</h2>
 				</div>
 			</div>
 			<!--프로필셋팅 아이디영역end-->
@@ -27,14 +27,14 @@
 					<div class="item__title">이름</div>
 					<div class="item__input">
 						<input type="text" name="name" placeholder="이름"
-							value="겟인데어" />
+							value="강한솔" />
 					</div>
 				</div>
 				<div class="content-item__03">
 					<div class="item__title">유저네임</div>
 					<div class="item__input">
 						<input type="text" name="username" placeholder="유저네임"
-							value="TherePrograming" readonly="readonly" />
+							value="개발자솔짜미" readonly="readonly" />
 					</div>
 				</div>
 				<div class="content-item__04">
@@ -47,13 +47,13 @@
 					<div class="item__title">웹사이트</div>
 					<div class="item__input">
 						<input type="text" name="website" placeholder="웹 사이트"
-							value="https://github.com/codingspecialist" />
+							value="https://github.com/DEV_ZZAME" />
 					</div>
 				</div>
 				<div class="content-item__06">
 					<div class="item__title">소개</div>
 					<div class="item__input">
-						<textarea name="bio" id="" rows="3">프로그래머</textarea>
+						<textarea name="bio" id="" rows="3">소프트웨어 엔지니어</textarea>
 					</div>
 				</div>
 				<div class="content-item__07">
@@ -67,14 +67,14 @@
 					<div class="item__title">이메일</div>
 					<div class="item__input">
 						<input type="text" name="email" placeholder="이메일"
-							value="getinthere@naver.com" readonly="readonly" />
+							value="dev.zzame@gmail.com" readonly="readonly" />
 					</div>
 				</div>
 				<div class="content-item__09">
 					<div class="item__title">전회번호</div>
 					<div class="item__input">
 						<input type="text" name="tel" placeholder="전화번호"
-							value="0102222" />
+							value="+82 10 3649 4279" />
 					</div>
 				</div>
 				<div class="content-item__10">

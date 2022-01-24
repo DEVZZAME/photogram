@@ -14,7 +14,7 @@
 						<img class="profile-image" src="#"
 							onerror="this.src='/images/person.jpeg'" />
 					</div>
-					<div>TherePrograming</div>
+					<div>DEV_ZZAME</div>
 				</div>
 
 				<div class="sl__item__img">
@@ -29,17 +29,17 @@
 						</button>
 					</div>
 
-					<span class="like"><b id="storyLikeCount-1">3 </b>likes</span>
+					<span class="like"><b id="storyLikeCount-1">7777 </b>likes</span>
 
 					<div class="sl__item__contents__content">
-						<p>등산하는 것이 너무 재밌네요</p>
+						<p>여러분 안녕하세요?</p>
 					</div>
 
 					<div id="storyCommentList-1">
 
 						<div class="sl__item__contents__comment" id="storyCommentItem-1"">
 							<p>
-								<b>Lovely :</b> 부럽습니다.
+								<b>HAMZZI :</b> 개발자 솔짜미님 안녕하세요?
 							</p>
 
 							<button>
