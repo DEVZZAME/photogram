@@ -25,13 +25,17 @@ import lombok.RequiredArgsConstructor;
 @RestController
 //API컨트롤러는 Data를 응답해야 하기 때문에 모두 RestController 어노테이션 사용
 public class UserApiController {
-	
+
 	private final UserService userService;
-	
+
 	@PutMapping("/api/user/{id}")
-	public CMRespDto<?> update(@PathVariable int id, 
-			@Valid UserUpdateDto userUpdateDto,
-			BindingResult bindingResult, //꼭 @Valid가 적혀있는 다음 파라미터에 적어야 됨
+	public CMRespDto<?> update(@PathVariable int id, @Valid UserUpdateDto userUpdateDto, BindingResult bindingResult, // 꼭
+																														// @Valid가
+																														// 적혀있는
+																														// 다음
+																														// 파라미터에
+																														// 적어야
+																														// 됨
 			@AuthenticationPrincipal PrincipalDetails pricipalDetails) {
 		if (bindingResult.hasErrors()) {
 			Map<String, String> errorMap = new HashMap<>();
@@ -40,10 +44,11 @@ public class UserApiController {
 				errorMap.put(error.getField(), error.getDefaultMessage());
 			}
 			throw new CustomValidationApiException("유효성검사 실패", errorMap);
+		} else {
+			// Data를 받기 위한 DTO가 필요함
+			User userEntity = userService.회원수정(id, userUpdateDto.toEntity());
+			pricipalDetails.setUser(userEntity);// 세션 정보 변경
+			return new CMRespDto<>(1, "회원수정 완료", userEntity);
 		}
-		//Data를 받기 위한 DTO가 필요함
-		User userEntity = userService.회원수정(id, userUpdateDto.toEntity());
-		pricipalDetails.setUser(userEntity);//세션 정보 변경
-		return new CMRespDto<>(1, "회원수정 완료", userEntity);
 	}
 }
