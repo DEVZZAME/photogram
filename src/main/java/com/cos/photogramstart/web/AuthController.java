@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cos.photogramstart.domain.user.User;
-import com.cos.photogramstart.handler.ex.CustomValidationException;
+import com.cos.photogramstart.handler.ex.CustomValidationApiException;
 import com.cos.photogramstart.service.AuthService;
 import com.cos.photogramstart.web.dto.auth.SignupDto;
 
@@ -43,16 +43,16 @@ public class AuthController {
 
 	// 회원가입버튼 -> /auth/signup -> /auth/signin
 	@PostMapping("/auth/signup")
-	public /*@ResponseBody*/ String signup(@Valid SignupDto signupDto, BindingResult bidingResult) { // key=value
+	public /*@ResponseBody*/ String signup(@Valid SignupDto signupDto, BindingResult bindingResult) { // key=value
 																									// (x-www-form-encoded)
 
-		if (bidingResult.hasErrors()) {
+		if (bindingResult.hasErrors()) {
 			Map<String, String> errorMap = new HashMap<>();
 
-			for (FieldError error : bidingResult.getFieldErrors()) {
+			for (FieldError error : bindingResult.getFieldErrors()) {
 				errorMap.put(error.getField(), error.getDefaultMessage());
 			}
-			throw new CustomValidationException("유효성검사 실패", errorMap);
+			throw new CustomValidationApiException("유효성검사 실패", errorMap);
 		} else {
 			// User <- SignDto
 			User user = signupDto.toEntity();

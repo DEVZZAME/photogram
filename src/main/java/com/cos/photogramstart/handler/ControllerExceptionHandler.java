@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cos.photogramstart.handler.ex.CustomValidationApiException;
 import com.cos.photogramstart.handler.ex.CustomValidationException;
 import com.cos.photogramstart.util.Script;
 import com.cos.photogramstart.web.dto.CMRespDto;
@@ -26,5 +27,10 @@ public class ControllerExceptionHandler {
 		//3. Android 통신 - CMRespDto가 좋음(개발자)
 		return Script.back(e.getErrorMap().toString());
 		//return new CMRespDto<Map>(-1, e.getMessage(), e.getErrorMap());
+	}
+	
+	@ExceptionHandler(CustomValidationApiException.class)
+	public String validationApiException(CustomValidationApiException e) {
+		return Script.back(e.getErrorMap().toString());
 	}
 }
