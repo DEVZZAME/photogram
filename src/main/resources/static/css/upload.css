@@ -70,7 +70,7 @@
 
 /*업로드 이미지 박스*/
 .upload .upload-form .upload-img {
-  width: 400px;
+  width: 300px;
   height: 300px;
   margin-bottom: 5px;
 }
@@ -91,7 +91,7 @@
 /*이미지에 대한 설명인풋 + 버튼*/
 .upload .upload-form .upload-form-detail input,
 .upload .upload-form .upload-form-detail button {
-  width: 340px;
+  width: 300px;
 }
 .upload .upload-form .upload-form-detail input {
   text-indent: 10px;

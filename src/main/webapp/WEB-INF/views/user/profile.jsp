@@ -56,7 +56,7 @@
 				<ul>
 					<li><a href=""> 게시물<span>${dto.imageCount}</span>
 					</a></li>
-					<li><a href="javascript:subscribeInfoModalOpen();"> 구독정보<span>${dto.subscribeCount}</span>
+					<li><a href="javascript:subscribeInfoModalOpen(${dto.user.id});"> 구독정보<span>${dto.subscribeCount}</span>
 					</a></li>
 				</ul>
 			</div>
@@ -129,9 +129,10 @@
 				<i class="fas fa-times"></i>
 			</button>
 		</div>
-		
-		
-			
+
+		<div class="subscribe-list" id="subscribeModalList">
+
+
 			
 		</div>
 	</div>
