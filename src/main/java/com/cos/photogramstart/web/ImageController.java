@@ -1,7 +1,9 @@
 package com.cos.photogramstart.web;
 
+import com.cos.photogramstart.domain.image.Image;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -11,6 +13,8 @@ import com.cos.photogramstart.service.ImageService;
 import com.cos.photogramstart.web.dto.image.ImageUploadDto;
 
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @Controller
@@ -22,9 +26,14 @@ public class ImageController {
 	public String story() {
 		return "image/story";
 	}
-	
+
+	// API 구현한다면 - 이유 - (브라우저에서 요청하는게 아니라, 안드로이드,iOS 요청)
 	@GetMapping("/image/popular")
-	public String popular() {
+	public String popular(Model model) {
+		// api는 데이터를 리턴하는 서버!!
+		List<Image> images = imageService.인기사진();
+		model.addAttribute("images", images);
+
 		return "image/popular";
 	}
 	

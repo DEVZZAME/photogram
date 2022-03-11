@@ -45,20 +45,10 @@ public class AuthController {
 	@PostMapping("/auth/signup")
 	public /*@ResponseBody*/ String signup(@Valid SignupDto signupDto, BindingResult bindingResult) { // key=value
 																									// (x-www-form-encoded)
-
-		if (bindingResult.hasErrors()) {
-			Map<String, String> errorMap = new HashMap<>();
-
-			for (FieldError error : bindingResult.getFieldErrors()) {
-				errorMap.put(error.getField(), error.getDefaultMessage());
-			}
-			throw new CustomValidationApiException("유효성검사 실패", errorMap);
-		} else {
 			// User <- SignDto
 			User user = signupDto.toEntity();
 			User userEntity = authService.회원가입(user);
 			System.out.println(userEntity);
 			return "auth/signin";
-		}
 	}
 }

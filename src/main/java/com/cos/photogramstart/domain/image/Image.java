@@ -3,17 +3,9 @@ package com.cos.photogramstart.domain.image;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.PrePersist;
-import javax.persistence.Transient;
+import javax.persistence.*;
 
+import com.cos.photogramstart.domain.comment.Comment;
 import org.hibernate.annotations.ManyToAny;
 
 import com.cos.photogramstart.domain.likes.Likes;
@@ -51,7 +43,11 @@ public class Image {
 	@OneToMany(mappedBy = "image")
 	private List<Likes> likes;
 
-	// 댓글 기능
+	// 댓글
+	@OrderBy("id DESC")
+	@JsonIgnoreProperties({"image"})
+	@OneToMany(mappedBy = "image")
+	private List<Comment> comments;
 
 	private LocalDateTime createDate; // DB에는 항상 시간이 필요함. 언제 DB가 들어왔는지 알아야 하니까...
 
