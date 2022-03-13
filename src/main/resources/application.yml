@@ -14,9 +14,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/photogram?serverTimezone=Asia/Seoul
-    username: cos
-    password: cos1234
+    url: jdbc:mysql://us-cdbr-east-05.cleardb.net:3306/photogram?serverTimezone=Asia/Seoul
+    username: b692c2988a954b
+    password: fea1ddfe
 #    driver-class-name: org.postgresql.Driver
 #    url: jdbc:postgresql://ec2-44-194-167-63.compute-1.amazonaws.com:5432/dfmlsu2ofb2e0f?characterEncoding=UTF-8&serverTimezone=UTC
 #    username: wbkuaskiwnhxxf
