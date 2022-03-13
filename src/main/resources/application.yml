@@ -13,14 +13,14 @@ spring:
       suffix: .jsp
 
   datasource:
-    #driver-class-name: com.mysql.cj.jdbc.Driver
-    #url: jdbc:mysql://localhost:3306/photogram?serverTimezone=Asia/Seoul
-    #username: cos
-    #password: cos1234
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ec2-44-194-167-63.compute-1.amazonaws.com:5432/dfmlsu2ofb2e0f?characterEncoding=UTF-8&serverTimezone=UTC
-    username: wbkuaskiwnhxxf
-    password: 0b5824aa517d0ade61ebb49c6f6adebec91f69406004aa3df93fd1f9db6f61b8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/photogram?serverTimezone=Asia/Seoul
+    username: cos
+    password: cos1234
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://ec2-44-194-167-63.compute-1.amazonaws.com:5432/dfmlsu2ofb2e0f?characterEncoding=UTF-8&serverTimezone=UTC
+#    username: wbkuaskiwnhxxf
+#    password: 0b5824aa517d0ade61ebb49c6f6adebec91f69406004aa3df93fd1f9db6f61b8
 
 
   jpa:
