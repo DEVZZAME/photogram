@@ -25,9 +25,6 @@
                         
                         <!--로그인 인풋-->
                         <form class="login__input"  action="/auth/signin" method="POST">
-                        <!-- 전달 방식을 GET이 아닌 POST로 하는 이유는
-                        	  GET으로 하게 될 경우 username과 password와 같은 개인정보가
-                        	  URL에 노출되기 때문에 POST로 전달하여 중요한 정보를 숨기기 위함 -->
                             <input type="text" name="username" placeholder="유저네임" required="required" />
                             <input type="password" name="password" placeholder="비밀번호" required="required" />
                             <button>로그인</button>
@@ -44,7 +41,7 @@
                         
                         <!-- Oauth 소셜로그인 -->
                         <div class="login__facebook">
-                            <button>
+                            <button onclick="javascript:location.href='/oauth2/authorization/facebook'">
                                 <i class="fab fa-facebook-square"></i>
                                 <span>Facebook으로 로그인</span>
                             </button>

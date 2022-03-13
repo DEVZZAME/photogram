@@ -11,10 +11,10 @@ import lombok.Data;
 
 @Data
 public class CommentDto {
-    @NotBlank // 빈값이거나 null 체크 그리고 빈 공백까지
-    private String content;
-    @NotNull // null 체크
-    private Integer imageId;
-
-    // toEntity 가 필요 없다.
+	@NotBlank // 빈값이거나 null 체크 그리고 빈 공백까지
+	private String content;
+	@NotNull // null 체크
+	private Integer imageId;
+	
+	// toEntity 가 필요 없다.
 }

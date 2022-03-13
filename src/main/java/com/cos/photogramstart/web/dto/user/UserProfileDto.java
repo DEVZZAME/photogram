@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class UserProfileDto {
-	private boolean PageOwnerState;
-	private User user;
+	private boolean pageOwnerState;
+	private int imageCount;
 	private boolean subscribeState;
 	private int subscribeCount;
-	private int imageCount;
+	private User user;
 }

@@ -31,13 +31,17 @@
 
 					<span class="like"><b id="storyLikeCount-1">3 </b>likes</span>
 
+					<div class="sl__item__contents__tags">
+						<p>#등산 #취미</p>
+					</div>
+
 					<div class="sl__item__contents__content">
 						<p>등산하는 것이 너무 재밌네요</p>
 					</div>
 
 					<div id="storyCommentList-1">
 
-						<div class="sl__item__contents__comment" id="storyCommentItem-1"">
+						<div class="sl__item__contents__comment" id="storyCommentItem-1">
 							<p>
 								<b>Lovely :</b> 부럽습니다.
 							</p>

@@ -22,9 +22,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Service
 public class ImageService {
-
+	
 	private final ImageRepository imageRepository;
-
+	
+	
 	@Transactional(readOnly = true)
 	public List<Image> 인기사진(){
 		return imageRepository.mPopular();
@@ -70,10 +71,8 @@ public class ImageService {
 			e.printStackTrace();
 		}
 		
-		//image 테이블에 저장
-		Image image = imageUploadDto.toEntity(imageFileName, principalDetails.getUser());
+		// image 테이블에 저장
+		Image image = imageUploadDto.toEntity(imageFileName, principalDetails.getUser()); // 5cf6237d-c404-43e5-836b-e55413ed0e49_bag.jpeg
 		imageRepository.save(image);
-		
-		//System.out.println(imageEntity);
 	}
 }
