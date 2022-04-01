@@ -14,9 +14,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/photogram?serverTimezone=Asia/Seoul
-    username: cos
-    password: cos1234
+    url: jdbc:mysql://springboot-db-zzame.cvriwfemm5ms.ap-northeast-2.rds.amazonaws.com/devzzame
+    username: devzzame
+    password: ad04275319!
 
 
   jpa:
